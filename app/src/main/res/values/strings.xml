@@ -28,4 +28,7 @@
     <string name="no">no</string>
     <string name="the_winner_is">The winner is :</string>
     <string name="contact_with_host">Contact with Host</string>
+    <string name="gift">GIFT</string>
+    <string name="a_gesture_of_kindness">A gesture of Kindness</string>
+    <string name="sign_in">Sign In</string>
 </resources>
