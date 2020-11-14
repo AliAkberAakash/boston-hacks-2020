@@ -35,6 +35,10 @@
         <argument
             android:name="postId"
             app:argType="string" />
+        <action
+            app:popUpTo="@id/postDetailsFragment"
+            android:id="@+id/action_postDetailsFragment_to_winnerFragment"
+            app:destination="@id/winnerFragment" />
     </fragment>
     <fragment
         android:id="@+id/chatListFragment"

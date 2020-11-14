@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.aliakberaakash.cutiehacksproject2020.R
 import com.aliakberaakash.cutiehacksproject2020.core.makeItGone
 import com.aliakberaakash.cutiehacksproject2020.data.model.Post
+import com.aliakberaakash.cutiehacksproject2020.ui.features.feed.FeedFragmentDirections
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.post_details_fragment.*
 import kotlinx.coroutines.runBlocking
@@ -67,6 +69,15 @@ class PostDetailsFragment : Fragment() {
             adapter.notifyDataSetChanged()
         })
 
+        viewModel.winner.observe(viewLifecycleOwner, {
+            if(it){
+                val action = PostDetailsFragmentDirections.actionPostDetailsFragmentToWinnerFragment(
+                    viewModel.post.value?.id ?: ""
+                )
+                findNavController(this).navigate(action)
+            }
+        })
+
         draw_winner_button.setOnClickListener {
 
             if(draw_winner_button.text == getString(R.string.draw_winner))
@@ -82,7 +93,6 @@ class PostDetailsFragment : Fragment() {
                         Timber.d(winner.toString())
                         post.winner = post.claimers[winner]
                         viewModel.setWinner(post)
-
                     }
                     .show()
 

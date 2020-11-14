@@ -13,6 +13,7 @@ class PostDetailsViewModel : ViewModel() {
     private val db = Firebase.firestore
     val post : MutableLiveData<Post> = MutableLiveData()
     val users : MutableLiveData<List<User>> = MutableLiveData()
+    val winner = MutableLiveData<Boolean>()
     private val repository = Repository()
 
     fun checkCurrentUser(email : String) = repository.checkCurrentUser(email)
@@ -55,7 +56,7 @@ class PostDetailsViewModel : ViewModel() {
             .document(post.id)
             .update("winner", post.winner)
             .addOnCompleteListener{
-
+                winner.value = true
             }
     }
 }
