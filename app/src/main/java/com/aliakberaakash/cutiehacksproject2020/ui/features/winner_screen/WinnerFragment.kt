@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.aliakberaakash.cutiehacksproject2020.R
 import kotlinx.android.synthetic.main.winner_fragment.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class WinnerFragment : Fragment() {
 
@@ -31,7 +34,18 @@ class WinnerFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(WinnerViewModel::class.java)
 
-        winner_text.text = args.postId
+        viewModel.post.observe(viewLifecycleOwner, {
+
+        })
+
+        viewModel.user.observe(viewLifecycleOwner, {
+            winner_text.text = it.userName
+        })
+
+
+        GlobalScope.launch(Dispatchers.IO) {
+            viewModel.getPost(args.postId)
+        }
 
     }
 

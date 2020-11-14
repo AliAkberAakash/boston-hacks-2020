@@ -2,9 +2,11 @@ package com.aliakberaakash.cutiehacksproject2020.data
 
 import com.aliakberaakash.cutiehacksproject2020.data.model.User
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.tasks.await
 
 class Repository {
 
@@ -20,8 +22,26 @@ class Repository {
         ""
     )
 
-    fun getPost(documentId: String) {
+    suspend fun getUser(userId : String) : DocumentSnapshot?{
+        return try {
+            db.collection("users")
+                .document(userId)
+                .get()
+                .await()
+        }catch (e : Exception){
+            null
+        }
+    }
 
+    suspend fun getPost(documentId: String) : DocumentSnapshot?{
+        return try {
+            db.collection("posts")
+                    .document(documentId)
+                    .get()
+                    .await()
+        }catch (e : Exception){
+            null
+        }
     }
 
     suspend fun onIWantThisClicked(documentId : String){
