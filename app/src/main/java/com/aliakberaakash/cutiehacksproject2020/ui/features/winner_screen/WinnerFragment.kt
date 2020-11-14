@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.aliakberaakash.cutiehacksproject2020.R
+import com.aliakberaakash.cutiehacksproject2020.core.makeItGone
+import com.aliakberaakash.cutiehacksproject2020.core.makeItVisible
 import kotlinx.android.synthetic.main.winner_fragment.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -40,6 +42,10 @@ class WinnerFragment : Fragment() {
 
         viewModel.user.observe(viewLifecycleOwner, {
             winner_text.text = it.userName
+
+            if(viewModel.checkUser(it.email))
+                contact_host_button.makeItVisible()
+
         })
 
 

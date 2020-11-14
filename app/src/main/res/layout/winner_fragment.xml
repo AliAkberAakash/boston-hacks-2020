@@ -42,6 +42,7 @@
             tools:text="Ali Akber" />
 
         <com.google.android.material.button.MaterialButton
+            android:visibility="gone"
             android:id="@+id/contact_host_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -23,4 +23,5 @@ class WinnerViewModel : ViewModel() {
         user.postValue(repository.getUser(userId)?.toObject<User>())
     }
 
+    fun checkUser(email: String) = repository.checkCurrentUser(email)
 }
