@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "510879454537",
+    "firebase_url": "https://cutiehacksproject-2020.firebaseio.com",
+    "project_id": "cutiehacksproject-2020",
+    "storage_bucket": "cutiehacksproject-2020.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:510879454537:android:bcf47a1d7a5f2685cb7698",
+        "android_client_info": {
+          "package_name": "com.aliakberaakash.cutiehacksproject2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "510879454537-b8cnrqs5bq5p5m0fjnvnbbh7aefecp4l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aliakberaakash.cutiehacksproject2020",
+            "certificate_hash": "dafde8db0d79a85c8dc382f3818fadb6ae199a1d"
+          }
+        },
+        {
+          "client_id": "510879454537-tqlcecoha28ukjs7ornopbk9ada2ii5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCt3KpsHP5yIqe3Es76fp8psuMN6tLAqL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "510879454537-tqlcecoha28ukjs7ornopbk9ada2ii5v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

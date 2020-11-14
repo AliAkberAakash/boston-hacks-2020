@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/feedFragment">
+
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.aliakberaakash.cutiehacksproject2020.ui.features.feed.FeedFragment"
+        android:label="Feed"
+        tools:layout="@layout/feed_fragment" >
+        <action
+            android:id="@+id/action_feedFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_winnerFragment"
+            app:destination="@id/winnerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.aliakberaakash.cutiehacksproject2020.ui.features.menu.MenuFragment"
+        android:label="Menu"
+        tools:layout="@layout/menu_fragment" />
+    <fragment
+        android:id="@+id/uploadImageFragment"
+        android:name="com.aliakberaakash.cutiehacksproject2020.ui.features.uploadImage.UploadImageFragment"
+        android:label="Create Post" />
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="com.aliakberaakash.cutiehacksproject2020.ui.features.post_details.PostDetailsFragment"
+        android:label="Post Details"
+        tools:layout="@layout/post_details_fragment">
+        <argument
+            android:name="postId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.aliakberaakash.cutiehacksproject2020.ui.features.chat.ChatListFragment"
+        android:label="Recent"
+        tools:layout="@layout/chat_list_fragment" />
+    <fragment
+        android:id="@+id/winnerFragment"
+        android:name="com.aliakberaakash.cutiehacksproject2020.ui.features.winner_screen.WinnerFragment"
+        android:label="Winner"
+        tools:layout="@layout/winner_fragment" >
+        <argument
+            android:name="postId"
+            app:argType="string" />
+    </fragment>
+</navigation>

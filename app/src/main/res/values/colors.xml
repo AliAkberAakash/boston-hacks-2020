@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="connect">#fcb000</color>
+    <color name="sendbtn">#ff4d00</color>
+    <color name="upload">#ed7b3e</color>
+    <color name="red">#FF0909</color>
+    <color name="primary">#A1CEB3</color>
+    <color name="primaryDark">#5F7A6A</color>
+    <color name="username_text_color">#616161</color>
+    <color name="post_text_color">#757575</color>
+</resources>
