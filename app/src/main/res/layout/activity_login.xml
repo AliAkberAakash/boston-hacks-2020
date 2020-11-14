@@ -3,20 +3,8 @@
     android:background="@color/primary"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <com.google.android.material.button.MaterialButton
-        android:backgroundTint="@color/post_text_color"
-        android:text="@string/sign_in"
-        android:id="@+id/sign_in_button"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoText" />
 
     <TextView
         android:id="@+id/logoText"
@@ -33,18 +21,40 @@
         app:layout_constraintVertical_bias="0.26999998" />
 
     <TextView
-        android:gravity="center"
-        android:textSize="22sp"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:gravity="center"
         android:text="@string/a_gesture_of_kindness"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoText" />
 
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="4dp"
+        android:gravity="center"
+        android:backgroundTint="@color/post_text_color"
+        android:id="@+id/sign_in_button"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
+        <TextView
+            android:padding="8dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="@string/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
