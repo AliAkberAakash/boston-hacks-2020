@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/feedFragment"
-        android:name="com.aliakberaakash.BostonHacks2020.ui.features.feed.FeedFragment"
+        android:name="com.aliakberaakash.boston_hacks.ui.features.feed.FeedFragment"
         android:label="Feed"
         tools:layout="@layout/feed_fragment" >
         <action
@@ -20,16 +20,16 @@
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
-        android:name="com.aliakberaakash.BostonHacks2020.ui.features.menu.MenuFragment"
+        android:name="com.aliakberaakash.boston_hacks.ui.features.menu.MenuFragment"
         android:label="Menu"
         tools:layout="@layout/menu_fragment" />
     <fragment
         android:id="@+id/uploadImageFragment"
-        android:name="com.aliakberaakash.BostonHacks2020.ui.features.uploadImage.UploadImageFragment"
+        android:name="com.aliakberaakash.boston_hacks.ui.features.uploadImage.UploadImageFragment"
         android:label="Create Post" />
     <fragment
         android:id="@+id/postDetailsFragment"
-        android:name="com.aliakberaakash.BostonHacks2020.ui.features.post_details.PostDetailsFragment"
+        android:name="com.aliakberaakash.boston_hacks.ui.features.post_details.PostDetailsFragment"
         android:label="Post Details"
         tools:layout="@layout/post_details_fragment">
         <argument
@@ -42,12 +42,12 @@
     </fragment>
     <fragment
         android:id="@+id/chatListFragment"
-        android:name="com.aliakberaakash.BostonHacks2020.ui.features.chat.ChatListFragment"
+        android:name="com.aliakberaakash.boston_hacks.ui.features.chat.ChatListFragment"
         android:label="Recent"
         tools:layout="@layout/chat_list_fragment" />
     <fragment
         android:id="@+id/winnerFragment"
-        android:name="com.aliakberaakash.BostonHacks2020.ui.features.winner_screen.WinnerFragment"
+        android:name="com.aliakberaakash.boston_hacks.ui.features.winner_screen.WinnerFragment"
         android:label="Winner"
         tools:layout="@layout/winner_fragment" >
         <argument
